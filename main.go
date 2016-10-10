@@ -16,6 +16,7 @@ import (
 
 var (
 	cfg = struct {
+		Debug          bool   `flag:"debug" default:"false" description:"Turn on debug output"`
 		DropboxToken   string `flag:"dropbox-token" env:"DROPBOX_TOKEN" description:"Dropbox token to use to access API"`
 		ForceOverwrite bool   `flag:"force-overwrite" default:"false" description:"Upload files even when they exist on target"`
 		Verbose        bool   `flag:"verbose,v" default:"false" description:"Enable verbose logging"`
@@ -33,6 +34,10 @@ func init() {
 	if cfg.VersionAndExit {
 		fmt.Printf("dbx-sync %s\n", version)
 		os.Exit(0)
+	}
+
+	if cfg.Debug {
+		cfg.Verbose = true
 	}
 }
 
@@ -52,7 +57,7 @@ func main() {
 		log.Fatalf("Destination prefix must start with '/': %q", destPrefix)
 	}
 
-	config := dropbox.Config{Token: cfg.DropboxToken, Verbose: cfg.Verbose}
+	config := dropbox.Config{Token: cfg.DropboxToken, Verbose: cfg.Debug}
 	dbx := files.New(config)
 
 	remoteFilesPresent, err := getRemoteFileList(dbx, rconfig.Args()[2])
