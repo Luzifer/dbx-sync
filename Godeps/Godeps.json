@@ -1,0 +1,48 @@
+{
+	"ImportPath": "github.com/Luzifer/dbx-sync",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Deps": [
+		{
+			"ImportPath": "github.com/Luzifer/rconfig",
+			"Comment": "v1.1.0",
+			"Rev": "c27bd3a64b5b19556914d9fec69922cf3852d585"
+		},
+		{
+			"ImportPath": "github.com/dropbox/dropbox-sdk-go-unofficial/dropbox",
+			"Rev": "fe9db01d5c86f2ea3ed2e1489012aa3f8dae576d"
+		},
+		{
+			"ImportPath": "github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/async",
+			"Rev": "fe9db01d5c86f2ea3ed2e1489012aa3f8dae576d"
+		},
+		{
+			"ImportPath": "github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/files",
+			"Rev": "fe9db01d5c86f2ea3ed2e1489012aa3f8dae576d"
+		},
+		{
+			"ImportPath": "github.com/dropbox/dropbox-sdk-go-unofficial/dropbox/properties",
+			"Rev": "fe9db01d5c86f2ea3ed2e1489012aa3f8dae576d"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Rev": "c7e63cf4530bcd3ba943729cee0efeff2ebea63f"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "f09c4662a0bd6bd8943ac7b4931e185df9471da4"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2",
+			"Rev": "2baa8a1b9338cf13d9eeb27696d761155fa480be"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2/internal",
+			"Rev": "2baa8a1b9338cf13d9eeb27696d761155fa480be"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "31c299268d302dd0aa9a0dcf765a3d58971ac83f"
+		}
+	]
+}
